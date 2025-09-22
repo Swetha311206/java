@@ -1,0 +1,55 @@
+import java.util.Scanner;
+class empl{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the number:");
+int no=sc.nextInt();
+System.out.println("Enter the Name:");
+String name=sc.nextLine();
+sc.nextLine();
+System.out.println("Enter whether domestic or commercial:");
+String choice=sc.nextLine();
+if(choice.equals("Domestic")){
+System.out.println("Enter the number of units used:");
+int n=sc.nextInt();
+if(n<=100){
+int amt=n*1;
+System.out.println("Your amount:"+amt);
+}
+if(n>100 && n<=200){
+double amt=n*2.5;
+System.out.println("Your amount:"+amt);
+}
+if(n>200 && n<=500){
+int amt=n*4;
+System.out.println("Your amount:"+amt);
+}
+if(n>500){
+int amt=n*6;
+System.out.println("Your amount:"+amt);
+}
+}
+else if(choice.equals("Commercial")){
+System.out.println("Enter the number of units used:");
+int n=sc.nextInt();
+if(n<=100){
+int amt=n*2;
+System.out.println("Your amount:"+amt);
+}
+if(n>100 && n<=200){
+double amt=n*4.5;
+System.out.println("Your amount:"+amt);
+}
+if(n>200 && n<=500){
+int amt=n*6;
+System.out.println("Your amount:"+amt);
+}
+if(n>500){
+int amt=n*7;
+System.out.println("Your amount:"+amt);
+}
+}
+else
+System.out.println("Choice invalid");
+}
+}
